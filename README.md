@@ -1,8 +1,15 @@
-# Projeto Calculadora — Qualidade de Software
+# Projeto Calculadora — FinançApp
 
-## 1. Identificação
+> Projeto acadêmico desenvolvido com foco em Qualidade de Software, Testes, Refatoração, Documentação e Versionamento.
 
+---
+
+## 1. Identificação do Projeto
+
+**Projeto:** Projeto Calculadora  
+**Contexto:** FinançApp  
 **Aluno:** Nome do aluno  
+**RA:** XXXXXXX  
 **Curso:** Nome do curso  
 **Disciplina:** Nome da disciplina  
 **Professor:** Nome do professor  
@@ -10,77 +17,109 @@
 
 ---
 
-# 2. Descrição do Projeto
+# 2. Visão Geral
 
-Este projeto foi desenvolvido como atividade prática para aplicação de conceitos de qualidade de software utilizando a linguagem Java.
+O projeto consiste no desenvolvimento de um módulo de cálculos matemáticos básicos em Java para a startup fictícia **FinançApp**.
 
-A aplicação consiste em uma calculadora capaz de executar operações matemáticas básicas:
+O módulo foi desenvolvido com o objetivo de ser utilizado futuramente em funcionalidades de controle financeiro, como:
 
-- Soma;
-- Subtração;
-- Multiplicação;
-- Divisão.
+- orçamento mensal;
+- divisão de despesas;
+- projeções financeiras;
+- cálculos auxiliares.
 
-Além da implementação das operações, o projeto contempla:
+Além do funcionamento correto das operações, o projeto aplica práticas de qualidade de software relacionadas a:
 
-- testes unitários;
+- testes;
 - tratamento de erros;
-- refatoração de código;
-- documentação utilizando JavaDoc;
-- geração de documentação HTML;
-- controle de versão com Git;
-- utilização de branches;
-- publicação no GitHub.
+- refatoração;
+- documentação;
+- versionamento;
+- manutenção de código.
 
 ---
 
-# 3. Contexto
+# 3. Problema
 
-O projeto simula o desenvolvimento de um módulo matemático para a startup fictícia **FinançApp**, responsável pelo desenvolvimento de uma aplicação de controle de finanças pessoais.
+Durante o desenvolvimento da aplicação FinançApp, foi identificada a necessidade de criar um módulo matemático reutilizável.
 
-O módulo poderá futuramente ser utilizado em funcionalidades como:
+Entretanto, a equipe definiu que o módulo não deveria apenas funcionar corretamente, mas também apresentar:
 
-- cálculo de orçamento mensal;
-- divisão de despesas;
-- projeções financeiras;
-- cálculo de valores básicos utilizados pelo sistema.
+- código legível;
+- testes automatizados;
+- tratamento de falhas;
+- documentação técnica;
+- controle de versões;
+- facilidade de manutenção.
+
+O desafio consiste, portanto, em desenvolver uma solução funcional e ao mesmo tempo aplicar boas práticas de Engenharia de Software.
 
 ---
 
 # 4. Objetivo
 
-O objetivo desta atividade é desenvolver uma aplicação Java simples aplicando práticas relacionadas à qualidade e manutenção de software.
+## 4.1 Objetivo Geral
 
-Ao final do desenvolvimento, o projeto deverá demonstrar:
+Desenvolver uma calculadora em Java aplicando práticas de qualidade, testes, documentação, refatoração e versionamento.
 
-- funcionamento correto das operações;
-- tratamento adequado de erros;
-- existência de testes;
-- melhoria do código por refatoração;
-- documentação técnica;
-- utilização de versionamento.
+## 4.2 Objetivos Técnicos
+
+- implementar operações matemáticas básicas;
+- tratar entradas inválidas;
+- impedir divisão por zero;
+- desenvolver testes automatizados;
+- refatorar o código sem alterar seu comportamento;
+- documentar classes e métodos com JavaDoc;
+- gerar documentação HTML;
+- utilizar Git e GitHub;
+- organizar commits e branches;
+- manter documentação técnica no README.
 
 ---
 
-# 5. Tecnologias Utilizadas
+# 5. Escopo Funcional
 
-| Tecnologia | Versão | Finalidade |
+A aplicação deverá oferecer as seguintes operações:
+
+| ID | Funcionalidade | Descrição | Status |
+|---|---|---|---|
+| RF01 | Soma | Soma dois números inteiros | ✅ |
+| RF02 | Subtração | Subtrai dois números inteiros | ✅ |
+| RF03 | Multiplicação | Multiplica dois números inteiros | ✅ |
+| RF04 | Divisão | Divide dois números inteiros | ✅ |
+| RF05 | Validação de divisão | Impede divisão por zero | ✅ |
+| RF06 | Operação inválida | Trata operadores não suportados | ✅ |
+
+---
+
+# 6. Requisitos Não Funcionais
+
+| ID | Categoria | Requisito |
 |---|---|---|
-| Java | XX | Desenvolvimento da aplicação |
-| JDK | XX | Compilação e execução |
-| JUnit | XX | Testes unitários |
+| RNF01 | Qualidade | O código deve possuir organização e legibilidade |
+| RNF02 | Testabilidade | As operações devem possuir testes automatizados |
+| RNF03 | Manutenção | O código deve permitir refatoração sem alteração funcional |
+| RNF04 | Documentação | Classes e métodos devem possuir JavaDoc |
+| RNF05 | Versionamento | O projeto deve utilizar Git e GitHub |
+| RNF06 | Confiabilidade | Erros não devem interromper inesperadamente a execução |
+
+---
+
+# 7. Tecnologias Utilizadas
+
+| Tecnologia | Versão | Utilização |
+|---|---|---|
+| Java | XX | Desenvolvimento |
+| JDK | XX | Compilação |
+| JUnit | XX | Testes |
 | Git | XX | Controle de versão |
 | GitHub | — | Repositório remoto |
-| JavaDoc | — | Geração da documentação |
-| IDE | XX | Desenvolvimento |
-
-> Substitua `XX` pelas versões realmente utilizadas.
+| JavaDoc | — | Documentação |
+| IDE | XX | Ambiente de desenvolvimento |
 
 ---
 
-# 6. Estrutura do Projeto
-
-A estrutura básica do projeto deverá seguir organização semelhante a:
+# 8. Estrutura do Projeto
 
 ```text
 projeto_calculadora/
@@ -97,10 +136,10 @@ projeto_calculadora/
 │   └── index.html
 │
 ├── images/
-│   ├── teste-soma.png
-│   ├── teste-divisao.png
-│   ├── testes-completos.png
-│   └── javadoc.png
+│   ├── testes/
+│   ├── javadoc/
+│   └── refatoracao/
 │
 ├── README.md
-└── .gitignore
+├── .gitignore
+└── demais arquivos do projeto
